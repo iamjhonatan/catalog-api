@@ -9,4 +9,6 @@ public class Product
     public string? UrlImage { get; set; }
     public float Stock { get; set; }
     public DateTime RegistrationDate { get; set; }
+    
+    // anemic class: no behavior
 }
