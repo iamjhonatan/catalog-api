@@ -9,6 +9,14 @@ public class Product
     public string? UrlImage { get; set; }
     public float Stock { get; set; }
     public DateTime RegistrationDate { get; set; }
+
+    
+    #region Relationship
+
+    public int CategoryId { get; set; }
+    public Category? Category { get; set; }
+
+    #endregion
     
     // anemic class: no behavior
 }
