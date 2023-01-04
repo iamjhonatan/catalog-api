@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jhona\\onedrive\\documentos\\projetos\\CatalogAPI\\CatalogAPI\\CatalogAPI.csproj": {}
+    "C:\\Users\\jhona\\OneDrive\\Documentos\\projetos\\CatalogAPI\\CatalogAPI\\CatalogAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jhona\\onedrive\\documentos\\projetos\\CatalogAPI\\CatalogAPI\\CatalogAPI.csproj": {
+    "C:\\Users\\jhona\\OneDrive\\Documentos\\projetos\\CatalogAPI\\CatalogAPI\\CatalogAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jhona\\onedrive\\documentos\\projetos\\CatalogAPI\\CatalogAPI\\CatalogAPI.csproj",
+        "projectUniqueName": "C:\\Users\\jhona\\OneDrive\\Documentos\\projetos\\CatalogAPI\\CatalogAPI\\CatalogAPI.csproj",
         "projectName": "CatalogAPI",
-        "projectPath": "C:\\Users\\jhona\\onedrive\\documentos\\projetos\\CatalogAPI\\CatalogAPI\\CatalogAPI.csproj",
+        "projectPath": "C:\\Users\\jhona\\OneDrive\\Documentos\\projetos\\CatalogAPI\\CatalogAPI\\CatalogAPI.csproj",
         "packagesPath": "C:\\Users\\jhona\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jhona\\onedrive\\documentos\\projetos\\CatalogAPI\\CatalogAPI\\obj\\",
+        "outputPath": "C:\\Users\\jhona\\OneDrive\\Documentos\\projetos\\CatalogAPI\\CatalogAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jhona\\AppData\\Roaming\\NuGet\\NuGet.Config"
