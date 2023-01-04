@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jhona\\OneDrive\\Documentos\\projetos\\CatalogAPI\\CatalogAPI\\CatalogAPI.csproj": {}
+    "C:\\Users\\jhona\\onedrive\\documentos\\projetos\\CatalogAPI\\CatalogAPI\\CatalogAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jhona\\OneDrive\\Documentos\\projetos\\CatalogAPI\\CatalogAPI\\CatalogAPI.csproj": {
+    "C:\\Users\\jhona\\onedrive\\documentos\\projetos\\CatalogAPI\\CatalogAPI\\CatalogAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jhona\\OneDrive\\Documentos\\projetos\\CatalogAPI\\CatalogAPI\\CatalogAPI.csproj",
+        "projectUniqueName": "C:\\Users\\jhona\\onedrive\\documentos\\projetos\\CatalogAPI\\CatalogAPI\\CatalogAPI.csproj",
         "projectName": "CatalogAPI",
-        "projectPath": "C:\\Users\\jhona\\OneDrive\\Documentos\\projetos\\CatalogAPI\\CatalogAPI\\CatalogAPI.csproj",
+        "projectPath": "C:\\Users\\jhona\\onedrive\\documentos\\projetos\\CatalogAPI\\CatalogAPI\\CatalogAPI.csproj",
         "packagesPath": "C:\\Users\\jhona\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jhona\\OneDrive\\Documentos\\projetos\\CatalogAPI\\CatalogAPI\\obj\\",
+        "outputPath": "C:\\Users\\jhona\\onedrive\\documentos\\projetos\\CatalogAPI\\CatalogAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jhona\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -42,13 +42,17 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.1, )"
+              "version": "[6.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[6.0.10, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.1, )"
+              "version": "[6.0.10, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",
