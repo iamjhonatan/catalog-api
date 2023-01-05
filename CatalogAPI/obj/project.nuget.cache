@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6M9kyv8SLgDh7/kNTw5sO59P0vljO+YMA33wZ9KDMEwa1yyCsY4sSSlAjkQLfAPrYnZgAszoG6+Usam1Ekyz6A==",
+  "dgSpecHash": "uVn7jz/BEkBcs4ZQVjE6K9fjWSLnPoIBf8tOVbKZTlvXjGxIF/oObek43zZszqnb7oGxEKVSBS9tMV1F2p4xeQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jhona\\OneDrive\\Documentos\\projetos\\CatalogAPI\\CatalogAPI\\CatalogAPI.csproj",
+  "projectFilePath": "C:\\Users\\jhona\\onedrive\\documentos\\projetos\\CatalogAPI\\CatalogAPI\\CatalogAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jhona\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\jhona\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.10\\microsoft.entityframeworkcore.6.0.10.nupkg.sha512",
