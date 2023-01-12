@@ -1,3 +1,4 @@
+using CatalogAPI.Domain;
 using CatalogAPI.Persistence.Context;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,6 +14,15 @@ public class ProductsController : Controller
     {
         _context = context;
     }
-    
-    
+
+    [HttpGet]
+    public ActionResult<IEnumerable<Product>> GetAllProducts()
+    {
+        var products = _context.Products.ToList();
+
+        if (products is null)
+            return NotFound("Products not found.");
+
+        return products;
+    }
 }

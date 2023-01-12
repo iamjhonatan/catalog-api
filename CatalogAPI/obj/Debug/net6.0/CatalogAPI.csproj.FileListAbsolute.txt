@@ -33,3 +33,4 @@ C:\Users\jhona\OneDrive\Documentos\projetos\CatalogAPI\CatalogAPI\bin\Debug\net6
 C:\Users\jhona\OneDrive\Documentos\projetos\CatalogAPI\CatalogAPI\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\jhona\OneDrive\Documentos\projetos\CatalogAPI\CatalogAPI\bin\Debug\net6.0\MySqlConnector.dll
 C:\Users\jhona\OneDrive\Documentos\projetos\CatalogAPI\CatalogAPI\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\jhona\OneDrive\Documentos\projetos\CatalogAPI\CatalogAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
