@@ -15,6 +15,8 @@ public class ProductsController : Controller
         _context = context;
     }
 
+    #region GET
+
     [HttpGet]
     public ActionResult<IEnumerable<Product>> GetAllProducts()
     {
@@ -26,7 +28,7 @@ public class ProductsController : Controller
         return products;
     }
 
-    [HttpGet("{id:int}")] // defining that parameter to be passed via URL must be the product ID, int 
+    [HttpGet("{id:int}", Name = "getProduct")] // defining that parameter to be passed via URL must be the product ID, int and naming his route
     public ActionResult<Product> GetProductById(int id)
     {
         var product = _context.Products.FirstOrDefault(p => p.ProductId == id);
@@ -36,4 +38,22 @@ public class ProductsController : Controller
 
         return product;
     }
+    
+    #endregion
+
+    #region POST
+
+    [HttpPost]
+    public ActionResult CreateProduct(Product product)
+    {
+        if (product is null)
+            return BadRequest("Invalid product.");
+        
+        _context.Products.Add(product);
+        _context.SaveChanges();
+
+        return new CreatedAtRouteResult("getProduct", new { id = product.ProductId }, product);
+    }
+    
+    #endregion
 }
