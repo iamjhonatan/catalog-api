@@ -25,4 +25,15 @@ public class ProductsController : Controller
 
         return products;
     }
+
+    [HttpGet("{id:int}")] // defining that parameter to be passed via URL must be the product ID, int 
+    public ActionResult<Product> GetProductById(int id)
+    {
+        var product = _context.Products.FirstOrDefault(p => p.ProductId == id);
+
+        if (product is null)
+            return NotFound("Product not found.");
+
+        return product;
+    }
 }
