@@ -1,6 +1,7 @@
 using CatalogAPI.Domain;
 using CatalogAPI.Persistence.Context;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CatalogAPI.Controllers.v1;
 
@@ -55,5 +56,22 @@ public class ProductsController : Controller
         return new CreatedAtRouteResult("getProduct", new { id = product.ProductId }, product);
     }
     
+    #endregion
+    
+
+    #region PUT
+
+    [HttpPut("{id:int}")]
+    public ActionResult UpdateProduct(int id, Product product)
+    {
+        if (id != product.ProductId)
+            return BadRequest();
+
+        _context.Entry(product).State = EntityState.Modified;
+        _context.SaveChanges();
+
+        return Ok(product);
+    }
+
     #endregion
 }
