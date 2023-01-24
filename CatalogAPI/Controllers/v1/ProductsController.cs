@@ -7,7 +7,7 @@ namespace CatalogAPI.Controllers.v1;
 
 [Route("v1/[controller]")]
 [ApiController]
-public class ProductsController : Controller
+public class ProductsController : ControllerBase
 {
     private readonly AppDbContext _context;
 
