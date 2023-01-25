@@ -37,7 +37,7 @@ public class ProductsController : ControllerBase
         var product = _context.Products.FirstOrDefault(p => p.ProductId == id);
 
         if (product is null)
-            return NotFound("Product not found.");
+            return NotFound($"Product with ID: {id} was not found.");
 
         return Ok(product);
     }
@@ -67,7 +67,7 @@ public class ProductsController : ControllerBase
     public ActionResult UpdateProduct(int id, Product product)
     {
         if (id != product.ProductId)
-            return BadRequest();
+            return BadRequest($"Product with ID: {id} was not found.");
 
         _context.Entry(product).State = EntityState.Modified;
         _context.SaveChanges();
@@ -86,7 +86,7 @@ public class ProductsController : ControllerBase
         var product = _context.Products.FirstOrDefault(p => p.ProductId == id);
 
         if (product is null)
-            return NotFound("Product not found.");
+            return NotFound($"Product with ID: {id} was not found.");
 
         _context.Products.Remove(product);
         _context.SaveChanges();

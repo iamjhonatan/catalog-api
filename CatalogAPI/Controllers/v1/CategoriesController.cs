@@ -36,14 +36,22 @@ public class CategoriesController : ControllerBase
     [HttpGet]
     public ActionResult<IEnumerable<Category>> GetAllCategories()
     {
-        var categories = _context.Categories
-            .AsNoTracking() // when a query is needed, without changing data, and that query is done faster, without the object being saved in cache.
-            .ToList();
+        // understanding error handling: any error in the ´try´ block, the ´catch´ block will bring a more user friendly message.
+        try
+        {
+            var categories = _context.Categories
+                .AsNoTracking() // when a query is needed, without changing data, and that query is done faster, without the object being saved in cache.
+                .ToList();
 
-        if (!categories.Any())
-            return NotFound("Categories not found.");
+            if (!categories.Any())
+                return NotFound("Categories not found.");
 
-        return Ok(categories);
+            return Ok(categories);
+        }
+        catch (Exception e)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError, "An error occurred while handling your request.");
+        }
     }
 
     [HttpGet("{id:int}", Name = "getCategory")]
@@ -52,7 +60,7 @@ public class CategoriesController : ControllerBase
         var category = _context.Categories.FirstOrDefault(x => x.Id == id);
 
         if (category is null)
-            return NotFound("Category not found.");
+            return NotFound($"Category with ID: {id} not found.");
 
         return Ok(category);
     }
@@ -83,7 +91,7 @@ public class CategoriesController : ControllerBase
     public ActionResult UpdateCategory(int id, Category category)
     {
         if (id != category.Id)
-            return BadRequest("Invalid ID.");
+            return BadRequest($"The ID {id} was not found.");
 
         _context.Entry(category).State = EntityState.Modified;
         _context.SaveChanges();
@@ -102,7 +110,7 @@ public class CategoriesController : ControllerBase
         var category = _context.Categories.FirstOrDefault(x => x.Id == id);
 
         if (category is null)
-            return NotFound("Category not found.");
+            return NotFound($"Category with ID: {id} was not found.");
 
         _context.Remove(category);
         _context.SaveChanges();
