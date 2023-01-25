@@ -23,6 +23,7 @@ public class CategoriesController : ControllerBase
     public ActionResult<IEnumerable<Category>> GetAllCategoriesProducts()
     {
         var categories = _context.Categories
+            .AsNoTracking()
             .Include(x => x.Products)
             .ToList();
 
@@ -35,12 +36,14 @@ public class CategoriesController : ControllerBase
     [HttpGet]
     public ActionResult<IEnumerable<Category>> GetAllCategories()
     {
-        var categories = _context.Categories.ToList();
+        var categories = _context.Categories
+            .AsNoTracking() // when a query is needed, without changing data, and that query is done faster, without the object being saved in cache.
+            .ToList();
 
         if (!categories.Any())
             return NotFound("Categories not found.");
 
-        return categories;
+        return Ok(categories);
     }
 
     [HttpGet("{id:int}", Name = "getCategory")]

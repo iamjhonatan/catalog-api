@@ -21,12 +21,14 @@ public class ProductsController : ControllerBase
     [HttpGet]
     public ActionResult<IEnumerable<Product>> GetAllProducts()
     {
-        var products = _context.Products.ToList();
+        var products = _context.Products
+            .AsNoTracking()
+            .ToList();
 
         if (products is null)
             return NotFound("Products not found.");
 
-        return products;
+        return Ok(products);
     }
 
     [HttpGet("{id:int}", Name = "getProduct")] // defining that parameter to be passed via URL must be the product ID, int and naming his route
@@ -37,7 +39,7 @@ public class ProductsController : ControllerBase
         if (product is null)
             return NotFound("Product not found.");
 
-        return product;
+        return Ok(product);
     }
     
     #endregion
